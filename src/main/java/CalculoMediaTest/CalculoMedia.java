@@ -4,7 +4,7 @@ public class CalculoMedia {
 
     private double primeiranota;
     private double segundanota;
-
+    private int semestre;
 
     public CalculoMedia(double _primeiranota, double _segundanota){
         this.primeiranota = _primeiranota;
@@ -16,14 +16,13 @@ public class CalculoMedia {
     }
 
     public String getSituacao(){
-        double soma = this.primeiranota + this.segundanota;
+        double soma = getPrimeiranota() + getSegundanota();
         if (soma < 12) {
             return "REPROVADO";
         }else{
             return "APROVADO";        }
     }
-
-
+    
     public double getPrimeiranota() {
         return primeiranota;
     }
